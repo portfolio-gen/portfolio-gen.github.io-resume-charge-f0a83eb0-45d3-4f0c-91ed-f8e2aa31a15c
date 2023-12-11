@@ -1,0 +1,102 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink: /:categories/:title/
+relative_permalinks: false
+include:
+  - _pages
+
+# Setup
+title:            "my website"
+tagline:          'A Jekyll theme'
+description:      "my website"
+name:             "James Doe"
+url:              #
+baseurl:          "https://portfolio-gen.github.io/"
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+resume_social_links:
+
+  resume_github_url: "https://github.com/testgithub"
+
+
+  resume_linkedin_url: "https://linkedin.com/in/testlinkedin"
+
+
+  resume_website_url: "https://adamlawson.dev"
+
+
+resume_extra_links:
+
+  - value: https://stackoverflow.com/
+
+
+
+sidebarItems:
+
+    - ref: education
+      title: Education
+
+    - ref: workexperience
+      title: Work Experience
+
+    - ref: projects
+      title: Projects
+
+    - ref: skills
+      title: Skills
+
+    - ref: aboutme
+      title: About Me
+
+
+
+
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: false
+      related: false
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  workexperience:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: false
+
+defaults:
+  # _workexperience
+  - scope:
+      path: ""
+      type: workexperience
+    values:
+      layout: single
+      author_profile: true
+      share: false
